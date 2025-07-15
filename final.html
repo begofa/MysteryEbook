@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Hasta pronto</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Dancing Script', cursive;
+      background: linear-gradient(to top, #2c3e50, #4ca1af);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      overflow: hidden;
+      color: #fff;
+      text-align: center;
+    }
+
+    .despedida {
+      max-width: 600px;
+      padding: 3rem;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 15px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+      animation: fadeIn 2s ease;
+    }
+
+    .despedida h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .despedida p {
+      font-size: 1.3rem;
+      line-height: 1.8;
+      margin-bottom: 2rem;
+    }
+
+    .despedida button {
+      background-color: rgba(255, 255, 255, 0.2);
+      border: 1px solid #fff;
+      padding: 0.7rem 1.4rem;
+      margin: 0.5rem;
+      border-radius: 10px;
+      color: #fff;
+      font-family: 'Raleway', sans-serif;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .despedida button:hover {
+      background-color: rgba(255, 255, 255, 0.4);
+    }
+
+    .mariposa {
+      position: absolute;
+      bottom: 5%;
+      left: -100px;
+      width: 50px;
+      opacity: 0.8;
+      animation: flyOutro 25s ease-in-out infinite;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes flyOutro {
+      0% { left: -100px; bottom: 5%; transform: rotate(0deg); }
+      50% { left: 50%; bottom: 85%; transform: rotate(10deg); }
+      100% { left: 110%; bottom: 10%; transform: rotate(-5deg); }
+    }
+
+    
+.boton-pdf {
+  display: inline-block;
+  margin-top: 1.5rem;
+  padding: 0.7rem 1.5rem;
+  background-color: rgba(255, 255, 255, 0.2);
+  border: 1px solid white;
+  border-radius: 10px;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background 0.3s;
+  font-family: 'Raleway', sans-serif;
+}
+
+.boton-pdf:hover {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+  </style>
+</head>
+<body>
+  <div class="despedida">
+    <h1>Gracias por quedarte🫂🩵</h1>
+    <p>
+      A veces, lo que más necesita el alma no es una respuesta,<br>
+      sino una pausa, una carta, una caricia.<br><br>
+      Este capítulo termina... pero otros siempre están esperando.
+    </p>
+    <button onclick="location.href='inicio.html'">Volver al inicio</button>
+    <button onclick="location.href='index.html'">Leer más mensajes</button>
+    <a href="assets/carta-compilada.pdf" download class="boton-pdf">📄 Descargar 💕</a>
+  </div>
+  <img src="assets/butterfly2.png" class="mariposa" alt="mariposa" />
+</body>
+</html>

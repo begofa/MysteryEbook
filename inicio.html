@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Carta de bienvenida</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Dancing Script', cursive;
+      background: #f8f1e4;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      color: #4b3f2f;
+      overflow: hidden;
+    }
+
+    .papel {
+      background: #fffef8;
+      border: 1px solid #e0d6c8;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+      border-radius: 10px;
+      padding: 3rem 2rem;
+      max-width: 600px;
+      text-align: center;
+      animation: fadeIn 2s ease-out;
+    }
+
+    .papel p {
+      font-size: 1.5rem;
+      line-height: 1.8;
+      margin-bottom: 2rem;
+    }
+
+    .papel button {
+      font-family: 'Raleway', sans-serif;
+      background-color: #d4af7f;
+      border: none;
+      padding: 0.8rem 2rem;
+      border-radius: 8px;
+      font-size: 1rem;
+      cursor: pointer;
+      color: white;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+
+    .papel button:hover {
+      background-color: #b99468;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .butterfly {
+  position: absolute;
+  bottom: 5%;
+  left: -100px;
+  width: 50px;
+  opacity: 0.8;
+  animation: flyIntro 20s ease-in-out infinite;
+  pointer-events: none;
+}
+
+@keyframes flyIntro {
+  0% { left: -100px; bottom: 5%; transform: rotate(0deg); }
+  50% { left: 50%; bottom: 80%; transform: rotate(10deg); }
+  100% { left: 110%; bottom: 10%; transform: rotate(-5deg); }
+}
+
+  </style>
+</head>
+<body>
+  <div class="papel">
+    <p id="mensajeBienvenida">
+  <span>Querida Inge...</span><br><br>
+  <span>A veces el corazón necesita palabras suaves,</span><br>
+  <span>y otras veces, solo un pequeño empujón para seguir.</span><br>
+  <span>Aquí encontrarás palabras para esos momentos.</span><br>
+  <span>No son mágicas, pero están llenas de intención.</span><br><br>
+  <span>¿Estás lista para abrir la primera?</span>
+</p>
+
+    <button onclick="window.location.href='index.html'">Leer mis mensajes 💬</button>
+  </div>
+<img src="assets/butterfly1.png" class="butterfly" alt="mariposa" />
+</body>
+</html>
+<script>
+  const spans = document.querySelectorAll('#mensajeBienvenida span');
+  spans.forEach((span, i) => {
+    span.style.opacity = 0;
+    setTimeout(() => {
+      span.style.transition = 'opacity 0.8s ease';
+      span.style.opacity = 1;
+    }, 1000 + i * 1200);
+  });
+</script>
